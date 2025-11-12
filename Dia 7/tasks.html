@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <style>
+
+        /*La etiquera ins y del se me complicaron, con el (innerHtml)*/
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f9f9f9;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 6px 0;
+            font-size: 18px;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        input {
+            padding: 6px;
+            font-size: 16px;
+            
+        }
+
+        button {
+            padding: 6px 12px;
+            font-size: 16px;
+            cursor: pointer;
+
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>Task</h2>
+   
+    <ol id="taskList">
+        <li>wake up</li>
+    </ol>
+    <input type="text" id="task" placeholder="Enter a new task">
+    <button id="add_task_button">Add task</button>
+
+    
+    <script>
+        
+        const addButton = document.getElementById('add_task_button');
+        const input = document.getElementById('task');
+        const list = document.getElementById('taskList');
+
+        addButton.addEventListener('click', () => {
+            const taskText = input.value.trim()
+
+            if (taskText !== '') {
+             
+                const lastTask =  list.lastElementChild
+                if (lastTask && ! lastTask.querySelector('del')) {
+                    const oldText= lastTask.textContent;
+                    lastTask.classList.add('completed')
+                    
+                }
+
+           
+                const newTask = document.createElement('li');
+                newTask.textContent = taskText
+                list.appendChild(newTask)
+
+               
+                input.value = ''
+                input.focus()
+            }
+        })
+    </script>
+</body>
+</html>
