@@ -14,3 +14,6 @@ for (let i = 0; i < palabraParaContar.length; i++ ) {
 }
  console.log(palabraParaContar + ":  " +"La cantidad de vocales en la palbra son: "+contador)
 
+
+
+

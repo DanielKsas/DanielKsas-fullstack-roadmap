@@ -1,0 +1,2 @@
+let cadenaTexto 
+//Por resolver
