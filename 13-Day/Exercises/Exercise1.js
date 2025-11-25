@@ -16,3 +16,4 @@ let c = "20";
 let d = 5;
 let resultado2 = c - d;
 ¿Cuál es el valor final de resultado2 y de qué tipo de dato es?*/
+
