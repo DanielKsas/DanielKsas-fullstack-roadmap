@@ -4,8 +4,10 @@
 
 numeroDado = 0;
 
-if(numeroDado ===0){
-    numeroDado = "Multiple of 3"
-} else{
+if(numeroDado  %3===0){
+  numeroDado = "Multiplo de 3"
+} else if(numeroDado %7===0){
+numeroDado = "Multiplo de 7"
+}else{
     numeroDado
 }

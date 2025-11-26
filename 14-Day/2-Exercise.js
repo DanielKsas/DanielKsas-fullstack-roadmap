@@ -8,10 +8,10 @@ let sumando2 = 0
 let resultadoSuma = sumando1 + sumando2
 
 
-if(resultadoSuma  %2===0  ){
+if(resultadoSuma  %2===0 || sumando1 ===50 || sumando2 ===50 || resultadoSuma ===50 ){
 resultadoSuma = Boolean = true
-}
 
-else{
-    resultadoSuma =  Boolean = false
+
+}else{
+    resultadoSuma =  Boolean = false 
 }
