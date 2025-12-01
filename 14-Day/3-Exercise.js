@@ -7,3 +7,8 @@
 * Si la cadena dada comienza con "Py", devuelve la cadena original.
 */
 
+let stringTyped = ["Hola"]
+
+for (let i = 0; i=== stringTyped.length;){
+console.log(i++)
+}
