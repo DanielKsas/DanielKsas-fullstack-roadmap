@@ -19,8 +19,11 @@ else{
   console.log("Es turno de " + player2)
 }
 return scoreTotal
+
+
 }
-let totalGlobal = WhoHasToServe("Danel", "Nos", 2, 4)
+
+let totalGlobal = WhoHasToServe("Danel", "Difa", 19, 4)
 
 console.log("score total " + " " + totalGlobal)
 
