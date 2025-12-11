@@ -565,7 +565,7 @@ const bookCollection = [
     isbn: "978-1451673312",
     publicationYear: 1953,
     genre: [
-      "Dystopian",
+      "",
       "Science Fiction"
     ],
     pages: 158,
@@ -593,21 +593,20 @@ const bookCollection = [
 
 
 
-function getBooksByGenre(generoLibro){
-const newBooks = []
+function getBooksByGenre(generoLibro) {
+  const newBooks = [];
 
+  for (const book of bookCollection) {
+    if (book.genre.includes(generoLibro)) {
+      newBooks.push(book);
+    }
+  }
 
-for (const i in bookCollection) {
-    let book = bookCollection[i]
-    
-    if(book.genre[i] === generoLibro){
-        newBooks.push(book)
-    }  
-}
-return newBooks
+  return newBooks;
 }
 
-console.log(getBooksByGenre("Science Fiction"))
+
+console.log(getBooksByGenre("Black Comedy"))
 
 
 

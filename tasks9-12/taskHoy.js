@@ -3,7 +3,7 @@
  (verdadero para obtener todos los libros disponibles y falso para obtener los libros no disponibles) */
 
 
-    const bookCollection = [
+const bookCollection = [
   {
     title: "Dune",
     author: "Frank Herbert",
@@ -597,17 +597,17 @@
 ];
 
 function getBooksByAvailability(isAvailableBig) {
-const result = []
+  const result = []
 
 
-for (let i in bookCollection){
+  for (let i in bookCollection) {
     let book = bookCollection[i]
 
-    if (book.isAvailable === isAvailableBig){
-        result.push(book)
+    if (book.isAvailable === isAvailableBig) {
+      result.push(book)
     }
-}
-return result
+  }
+  return result
 
 }
 console.log(getBooksByAvailability(true))
@@ -616,40 +616,15 @@ console.log(getBooksByAvailability(true))
 /* Crea una función que devuelva una matriz de libros publicados en un rango de años determinado, la función debe llamarse 
 "getBooksForYearsRange", la función debe recibir 2 parámetros (año inicial y año final) */
 
-function getBooksForYearsRange(añoInicial, añoFinal){
-let newArray = []
+function getBooksForYearsRange(añoInicial, añoFinal) {
 
-for (let i in bookCollection) {
-  let book = bookCollection[i]
+  let newArray = []
 
-  
-  
-}
-}
-
-function filerGreaterThanTen(ejemplosDeArray){
-let nuevoArray = []
-for(let numero of ejemplosDeArray){
-
-if (numero > 10){
-
-  nuevoArray.push(numero)
-
-}
+  for (const booook of bookCollection) {
+    if (booook.publicationYear >= añoInicial && booook.publicationYear <= añoFinal) {
+        newArray.push(booook)
+    }
+  }
 }
 
-return nuevoArray;
-
-}
-
-console.log(filerGreaterThanTen([5,12,3,20,11]))
-
-let example = "HOLAALALALALALA"
-
-for (const letra of example) {
-  console.log(letra);
-}
-
-let anotherThing = "HOLAALALALALALA"
-
-console.log(anotherThing)
+getBooksForYearsRange(1953, 1984)

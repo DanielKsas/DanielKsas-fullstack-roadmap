@@ -598,20 +598,6 @@ const bookCollection = [
 
 
 
-function getBooksByAmazonRating(NumberGiven){
-const newBooksAgain = []
-
-
-for (const i in bookCollection) {
-
-
-    
-}
-
-
-  
-}
-
 
 
 
