@@ -1,9 +1,9 @@
-/*Crea una función que devuelva una matriz de libros según el estado de disponibilidad. La función debe llamarse 
-"getBooksByAvailability". La función debe recibir solo un parámetro booleano que sea la disponibilidad que queremos obtener
- (verdadero para obtener todos los libros disponibles y falso para obtener los libros no disponibles) */
+/*create a function that returns an array of books based on amazon
+ rating, the function should be named "getBooksByAmazonRating", the function should receive 
+only one number parameter that is the minimum amazon rating that the book should have*/
 
 
-    const bookCollection = [
+const bookCollection = [
   {
     title: "Dune",
     author: "Frank Herbert",
@@ -593,63 +593,25 @@
       "media saturation"
     ]
   }
-
 ];
 
-function getBooksByAvailability(isAvailableBig) {
-const result = []
 
 
-for (let i in bookCollection){
-    let book = bookCollection[i]
 
-    if (book.isAvailable === isAvailableBig){
-        result.push(book)
-    }
+function getBooksByAmazonRating(NumberGiven){
+const newBooksAgain = []
+
+
+for (const i in bookCollection) {
+
+
+    
 }
-return result
 
-}
-console.log(getBooksByAvailability(true))
-
-
-/* Crea una función que devuelva una matriz de libros publicados en un rango de años determinado, la función debe llamarse 
-"getBooksForYearsRange", la función debe recibir 2 parámetros (año inicial y año final) */
-
-function getBooksForYearsRange(añoInicial, añoFinal){
-let newArray = []
-
-for (let i in bookCollection) {
-  let book = bookCollection[i]
 
   
-  
-}
 }
 
-function filerGreaterThanTen(ejemplosDeArray){
-let nuevoArray = []
-for(let numero of ejemplosDeArray){
 
-if (numero > 10){
 
-  nuevoArray.push(numero)
 
-}
-}
-
-return nuevoArray;
-
-}
-
-console.log(filerGreaterThanTen([5,12,3,20,11]))
-
-let example = "HOLAALALALALALA"
-
-for (const letra of example) {
-  console.log(letra);
-}
-
-let anotherThing = "HOLAALALALALALA"
-
-console.log(anotherThing)
