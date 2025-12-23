@@ -226,7 +226,8 @@ function getAnimalsByColor(animalColor){
     let numberAnimalsByColor = 0
 
     for(let i = 0; i < animalsCollection.length; i ++){
-    if(animalsCollection.includes(animalColor)){
+    if(animalsCollection[i].color.includes(animalColor)){
+
 
         numberAnimalsByColor++
     }
@@ -238,4 +239,4 @@ return numberAnimalsByColor;
 
 
 }
-console.log(getAnimalsByColor("Brown"))
+console.log(getAnimalsByColor("Red"))

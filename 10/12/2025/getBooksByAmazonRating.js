@@ -595,6 +595,32 @@ const bookCollection = [
   }
 ];
 
+// 10. Exercise: High Quality Books
+// Function Name: getHighRatedBooks
+// Instruction: Create a function that returns an array of titles of books that have at least 
+// one rating score greater than 4.8. You will need to check the `ratings` array of each book.
+// Example Output: ["The Name of the Wind", "Where the Sidewalk Ends", ...]
+// Hint: Inside the main forEach, you might need another loop (or .find/.some) to check the `ratings` 
+// array for any score > 4.8.
+
+
+
+function getHighQualityBoo(){
+
+let newArray = []
+
+for (let i = 0; i < bookCollection.length; i++) {
+  bookCollection[i].ratings
+
+  if(bookCollection[i].ratings > 4.8){
+    newArray.push(bookCollection[i])
+  }
+}
+
+return newArray 
+}
+console.log(getHighQualityBoo())
+
 
 
 
