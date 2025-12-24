@@ -145,6 +145,17 @@ console.log(contador)
         console.log(fraseNueva)
 }
 
+function noIdea(sentence){
+
+let newSentence = ""
+for(let i = sentence.length -1; i >=0; i--){
+newSentence += sentence[i]
+
+}
+return newSentence
+}
+console.log(noIdea("yo se que ustedes pueden con este ejercicio ustedes son unos cracks!"))
+
 
 // -------------------------------------------------- FINAL DE TU CODIGO --------------------------------------------------
 // ************************************************** EJERCICIO - FIN **************************************************
