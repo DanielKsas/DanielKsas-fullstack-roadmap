@@ -81,7 +81,7 @@ function encontrarParejaEnLaCiudad(personaObjetivo) {
     let pareja;
 
     for (let persona of personas) {
-        if (persona.genero !== personaObjetivo.genero) pareja = persona;
+        if (persona.genero !== personaObjetivo.genero && persona.ciudad === personaObjetivo.ciudad) pareja = persona;
     }
 
     return pareja;
@@ -107,7 +107,7 @@ function encontrarParejasPotencialesPorEdad(personaObjetivo) {
     let parejasPotenciales = [];
 
     for (let persona of personas) {
-        if ( persona.genero !== personaObjetivo.genero && persona.ciudad === personaObjetivo.ciudad && (persona.edad - personaObjetivo.edad <5))
+        if ( persona.genero !== personaObjetivo.genero && persona.ciudad === personaObjetivo.ciudad && Math.abs(persona.edad - personaObjetivo.edad ) <=5 ) 
             { 
             parejasPotenciales.push(persona)
         }
@@ -124,16 +124,22 @@ console.log(encontrarParejasPotencialesPorEdad({ nombre: "Nicolás", edad: 23, i
  *  del genero contrario que al menos compartan un interes en comun con la persona que se paso como parametro de la funcion, las
  *  personas dentro de la lista deben estar en la misma ciudad.
  */
-function encontrarParejaPorInteres(personaObjetivo){
-    let parejasPotenciales = []
-for (const persona of personas) {
+function encontrarParejaPorInteres(personaObjetivo) {
+    let parejasPotenciales = [];
 
-    if (persona.genero !== personaObjetivo.genero && persona.ciudad === personaObjetivo.ciudad )
-        {
-parejasPotenciales.push(persona)
-    }   
-  }
-return parejasPotenciales
+    for (const persona of personas) {
+        if (
+            persona.genero !== personaObjetivo.genero &&
+            persona.ciudad === personaObjetivo.ciudad &&
+            persona.intereses.some(soloUnInteres =>
+                personaObjetivo.intereses.includes(soloUnInteres)
+            )
+        ) {
+            parejasPotenciales.push(persona);
+        }
+    }
+
+    return parejasPotenciales;
 }
 
 // el siguiente console.log debe imprimir 3 parejas potenciales (Daniela de 29 años, Valentina de 30 años y Daniela de 58 años)

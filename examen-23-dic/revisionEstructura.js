@@ -12,16 +12,26 @@
  *  revisarEstructura("( ( ( ()) ) () (()) ())") -> true
  */
 
-function revisarEstructura(parentesis){
-let nuevosParentesis = ""
-    for(let i = 0; i < parentesis.length; i++){
-if(parentesis.length %2===0){
-nuevosParentesis += parentesis[i]
-return true
-}
+function revisarEstructura(parentesis) {
+    let contador = 0;
+
+    for (let i = 0; i < parentesis.length; i++) {
+        let caracter = parentesis[i];
+
+        if (caracter === "(") {
+            contador++;
+        } else if (caracter === ")") {
+            contador--;
+        }
+
+        
+        if (contador < 0) {
+            return false;
+        }
     }
-   return nuevosParentesis
 
+    
+    return contador === 0;
 }
 
-console.log(revisarEstructura("( ( ( ()) ) () (()) ())"))
+console.log(revisarEstructura("( (((( ())( ))"))
