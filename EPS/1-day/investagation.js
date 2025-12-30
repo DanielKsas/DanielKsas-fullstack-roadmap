@@ -27,3 +27,6 @@ return hospitalHistoryDoctor
 }
 
 console.log(investagation("Dr. Luis Burbano"))
+
+
+
