@@ -30,7 +30,7 @@ function hospitalUsers(nameHospital) {
 
     }
 
-    const patientsArray = [...patientsNameSet] 
+    const patientsArray = [...patientsNameSet]
 
     return patientsArray
 }
